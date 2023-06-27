@@ -10,8 +10,8 @@
 
 char *converter(unsigned long n, int b, int flag)
 {
-	char *r;
-	char buff[50];
+	static char *r;
+	static char buff[50];
 	char *ptr;
 
 	r = (flag) ? "0123456789abcdef" : "0123456789ABCDEF";
