@@ -9,9 +9,9 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
+	int len = 0;
 	int (*func)(va_list, flags *);
 	flags f = {0, 0, 0};
-	int len = 0;
 
 	va_start(args, format);
 	if (!format || (format[0] == '%' && !format[1]))
@@ -29,10 +29,11 @@ int _printf(const char *format, ...)
 				len += _putchar('%');
 				continue;
 			}
-			while (get_flag(*format, &flag))
+			while (get_flag(*format, &f))
 				format++;
-			func = get_func(*p);
-			len += (func) ? func(args, &flag) : _printf("%%%c", *p);
+			func = get(*format);
+			len += (func) ? func(args, &f)
+				: _printf("%%%c", *format);
 		}
 		else
 			len += _putchar(*format);

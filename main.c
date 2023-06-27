@@ -6,6 +6,6 @@
 
 int main(void)
 {
-	_printf("H %c %s %%\n", 'a', "hijack");
+	_printf("%c %s %%\n", 'a', "hijack");
 	return (0);
 }

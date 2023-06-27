@@ -13,7 +13,7 @@
  * @hash: for '#'
  */
 
-typdef struct flag
+typedef struct flags
 {
 	int plus;
 	int space;
@@ -28,7 +28,7 @@ typedef struct handle
 
 int _printf(const char *format, ...);
 int print_s(va_list arg, flags *f);
-int print_char(va_list a, flags_t *f)
+int print_char(va_list a, flags *f);
 int _puts(char *s);
 int _putchar(char c);
 int (*get(char s))(va_list, flags *);

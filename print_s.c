@@ -10,6 +10,7 @@
 int print_s(va_list arg, flags *f)
 {
 	char *s = va_arg(arg, char *);
+	(void)f;
 
 	if (!s)
 		s = "(null)";
