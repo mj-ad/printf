@@ -26,7 +26,7 @@ int print_x(va_list a, flags *f)
 {
 	unsigned int i = va_arg(a, unsigned int);
 	char *s = converter(i, 16, 1);
-	int c;
+	int c = 0;
 
 	if (f->hash == 1 && s[0] != '0')
 		c += _puts("0x");
@@ -44,8 +44,8 @@ int print_x(va_list a, flags *f)
 int print_X(va_list a, flags *f)
 {
 	unsigned int i = va_arg(a, unsigned int);
-	char *s = converter(i, 16, 1);
-	int c;
+	char *s = converter(i, 16, 0);
+	int c = 0;
 
 	if (f->hash == 1 && s[0] != '0')
 		c += _puts("0X");
@@ -63,8 +63,8 @@ int print_X(va_list a, flags *f)
 int print_o(va_list a, flags *f)
 {
 	unsigned int i = va_arg(a, unsigned int);
-	char *s = converter(i, 8, 1);
-	int c;
+	char *s = converter(i, 8, 0);
+	int c = 0;
 
 	if (f->hash == 1 && s[0] != '0')
 		c += _putchar('0');

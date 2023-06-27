@@ -42,5 +42,10 @@ int print_b(va_list a, flags *f);
 int print_x(va_list a, flags *f);
 int print_X(va_list a, flags *f);
 int print_o(va_list a, flags *f);
+int print_S(va_list a, flags *f);
+int print_r(va_list a, flags *f);
+int print_R(va_list a, flags *f);
+int print_per(va_list a, flags *f);
+int print_p(va_list a, flags *f);
 
 #endif /* MAIN_H */

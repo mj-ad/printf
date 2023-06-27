@@ -18,11 +18,11 @@ int (*get(char s))(va_list, flags *)
 		{'x', print_x},
 		{'X', print_X},
 		{'o', print_o},
-		{'R', print_rot13},
-		{'r', print_rev},
+		{'R', print_R},
+		{'r', print_r},
 		{'S', print_S},
-		{'p', print_address},
-		{'%', print_percent}
+		{'p', print_p},
+		{'%', print_per}
 	};
 	int flag = 14;
 	int i;
