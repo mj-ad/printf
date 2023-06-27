@@ -102,7 +102,6 @@ int count(int i)
 	for (; k != 0; j++)
 	{
 		k /= 10;
-		j++;
 	}
 	return (j);
 }
