@@ -11,13 +11,13 @@
 char *converter(unsigned long n, int b, int flag)
 {
 	char *r;
-	char buf[50];
+	char buff[50];
 	char *ptr;
 
 	r = (flag) ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buff[49];
 	*ptr = '\0';
-	while (num != 0)
+	while (n != 0)
 	{
 		*--ptr = r[n % b];
 		n /= b;
@@ -37,9 +37,9 @@ int print_int(va_list a, flags *f)
 	int i = va_arg(a, int);
 	int d = count(i);
 
-	if (f->space == 1 && f->plus == 0 & i >= 0)
+	if (f->space == 1 && f->plus == 0 && i >= 0)
 		d += _putchar(' ');
-	if (f->plus == 1 & i >= 0)
+	if (f->plus == 1 && i >= 0)
 		d += _putchar('+');
 	if (i <= 0)
 		d++;
@@ -99,7 +99,7 @@ int count(int i)
 		k = i * -1;
 	else
 		k = i;
-	for (; k != 0; ; j++)
+	for (; k != 0; j++)
 	{
 		k /= 10;
 		j++;

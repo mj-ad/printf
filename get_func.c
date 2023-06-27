@@ -14,9 +14,8 @@ int (*get(char s))(va_list, flags *)
 		{'c', print_char},
 		{'d', print_int},
 		{'u', print_ui},
-		{'x', print_hex},
 	};
-	int flag = 6;
+	int flag = 5;
 	int i;
 
 	for (i = 0; i < flag; i++)
