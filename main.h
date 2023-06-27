@@ -33,5 +33,10 @@ int _puts(char *s);
 int _putchar(char c);
 int (*get(char s))(va_list, flags *);
 int get_flag(char s, flags *f);
+char *converter(unsigned long n, int b, int flag);
+int print_int(va_list a, flags *f);
+int print_ui(va_list a, flags *f);
+void print(int n);
+int count(int i);
 
 #endif /* MAIN_H */

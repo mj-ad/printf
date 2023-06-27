@@ -2,8 +2,8 @@
 
 /**
  * print_s - print string
- *@a: character
- *@f: flags
+ *@arg: character
+ * @f: flags
  * Return: strlen
  */
 
