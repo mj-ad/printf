@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	_printf("%b\n", 70);
+	_printf("%b\n", -70);
 	return (0);
 }

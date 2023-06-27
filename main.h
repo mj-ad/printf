@@ -38,6 +38,9 @@ int print_int(va_list a, flags *f);
 int print_ui(va_list a, flags *f);
 void print(int n);
 int count(int i);
-int print_b(va_list, flags *f);
+int print_b(va_list a, flags *f);
+int print_x(va_list a, flags *f);
+int print_X(va_list a, flags *f);
+int print_o(va_list a, flags *f);
 
 #endif /* MAIN_H */
